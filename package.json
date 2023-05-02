@@ -1,0 +1,26 @@
+{
+  "name": "action-eslint",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsup -w",
+    "build": "tsup",
+    "lint": "eslint --ext .ts"
+  },
+  "keywords": [],
+  "author": "Nora Reichwald <nora@reichwald.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "tslib": "^2.5.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
+    "@octokit/types": "^9.2.0"
+  }
+}
