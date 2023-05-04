@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsup -w",
+    "dev": "tsup --watch",
     "build": "tsup",
-    "lint": "eslint --ext .ts"
+    "start": "node dist/index.js",
+    "lint": "eslint --ext .ts ."
   },
   "keywords": [],
   "author": "Nora Reichwald <nora@reichwald.me>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.16.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
     "tslib": "^2.5.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"

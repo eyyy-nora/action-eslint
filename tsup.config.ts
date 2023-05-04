@@ -1,12 +1,13 @@
 import { defineConfig } from "tsup";
 
-export default defineConfig({
+export default defineConfig(({ watch }) => ({
   entry: ["src/index.ts"],
-  sourcemap: true,
-  clean: true,
-  minify: true,
-  dts: true,
+  sourcemap: !watch,
+  clean: !watch,
+  minify: !watch,
+  dts: !watch,
   format: ["cjs", "esm"],
   target: "node18",
   outDir: "dist",
-});
+  onSuccess: watch ? "pnpm run start" : undefined,
+}));
